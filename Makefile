@@ -4,8 +4,7 @@ path = src/python-fastui
 .PHONY: install
 install:
 	pip install -U pip pre-commit pip-tools
-	pip install -r $(path)/requirements/all.txt
-	pip install -e $(path)
+	pip install -r requirements/all.txt
 	pre-commit install
 
 .PHONY: update-lockfiles
@@ -18,13 +17,13 @@ update-lockfiles:
 
 .PHONY: format
 format:
-	ruff check --fix-only $(path) app
-	ruff format $(path) app
+	ruff check --fix-only $(path) demo
+	ruff format $(path) demo
 
 .PHONY: lint
 lint:
-	ruff check $(path) app
-	ruff format --check $(path) app
+	ruff check $(path) demo
+	ruff format --check $(path) demo
 
 .PHONY: typecheck
 typecheck:
