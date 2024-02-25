@@ -5,7 +5,6 @@ from fastui import AnyComponent, FastUI
 
 from app.pages.blogs import blogs
 from app.pages.root import top
-from app.shared import demo_page
 
 
 router = APIRouter()
