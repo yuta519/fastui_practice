@@ -4,11 +4,10 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastui import prebuilt_html
 
-from .root import router as root_router
-
+from app.routes import router
 
 app = FastAPI()
-app.include_router(root_router, prefix='/api')
+app.include_router(router, prefix='/api')
 
 @app.get('/{path:path}')
 async def html_landing() -> HTMLResponse:
