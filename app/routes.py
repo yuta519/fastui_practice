@@ -15,4 +15,4 @@ def api_index() -> list[AnyComponent]:
 
 @router.get('/blogs', response_model=FastUI, response_model_exclude_none=True)
 def blogs_index() -> list[AnyComponent]:
-    return blogs
+    return blogs()
